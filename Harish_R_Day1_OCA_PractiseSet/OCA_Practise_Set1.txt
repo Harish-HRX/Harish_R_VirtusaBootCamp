@@ -1,0 +1,163 @@
+1. What will be the result of compiling and executing Wall class?
+
+public class Wall {
+	public static void main(String args[]) {
+	double area = 5.7;
+	String color;
+	if (area < 7)
+	color = "green"; 
+	System.out.println(color); 
+	}
+ }
+
+
+D.Compilation error(error: variable color might not have been initialized color)
+
+====================================================================================================================================================
+2.	What will be the result of compiling and executing Test class?	
+
+ public static void main(String []args){
+        int a = 7;
+        boolean res = a++ == 7 && ++a == 9 || a++ == 9;
+        System.out.println("a = " + a);
+        System.out.println("res = " + res);
+     }
+
+A.a=9
+  res=true
+====================================================================================================================================================
+
+3.	Consider codes of 3 java files:
+ 
+	//Class1.java
+	package com.jack;
+
+      import java.io.FileNotFoundException; 5.
+	public class Class1 {
+	public void read() throws FileNotFoundException {} 8. }
+
+	//Class2.java
+	package com.jack;
+
+	public class Class2 {
+	String Class2;
+	public void Class2() {} 7. }
+
+	//Class3.java
+	package com.jack;
+
+	public class Class3 {
+	private void print() {
+	private String msg = "HELLO";
+	System.out.println(msg); 8.	}
+ }
+
+Which of the following statement is true?
+
+A.	Class1.java and Class2.java compile successfully(Bcoz in class 3 private member given inside method)
+
+====================================================================================================================================================
+
+4.   Consider below code:
+     public static void main(String[] args) {
+ 	System.out.println("ONE");	 
+     } 
+     public static void main(Integer[] args) {
+        System.out.println("TWO");
+     }
+     public static void main(byte [] args) {
+         System.out.println("THREE");
+     }
+
+D.	ONE(bcoz always get as String[] and JVM always executes PSVM first)
+====================================================================================================================================================
+
+
+5.	What will be the result of compiling and executing Test class?
+
+	public class Test {
+	public static void main(String[] args) {
+	Boolean [] arr = new Boolean[2];
+	System.out.println(arr[0] + ":" + arr[1]); 
+	}
+ }
+
+C.null:null(Bcoz defult values of objects are "NULL")
+====================================================================================================================================================
+6.Consider below code:
+
+public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder();
+        try {
+        for(;;) {
+        sb.append("OCA");
+        }
+    } catch(Exception e) {
+     System.out.println("Exception!!!");
+    }
+    System.out.println("Main ends!!!");
+ }
+What will be the result of compiling and executing it?
+
+E.“Exception.!!!” is printed on the console and program terminates abruptly(main" java.lang.OutOfMemoryError: Java heap space)
+====================================================================================================================================================
+
+7.	Consider below code:
+	//Test.java
+	import java.util.ArrayList;
+	import java.util.List; 4.
+	public class Test {
+	public static void main(String[] args) {
+	Boolean [] arr = new Boolean[2];
+	List<Boolean> list = new ArrayList<>();
+	list.add(arr[0]);
+	list.add(arr[1]); 11.
+	if(list.remove(0)) {
+	list.remove(1);
+	}
+
+	System.out.println(list);
+	}
+ 	}
+
+What will be the result of compiling and executing Test class?
+
+F.NullPointerException is thrown at runtime(Bcoz trying to use object referrence that has null value)
+====================================================================================================================================================
+
+8.	Which of the following is the correct package declaration to declare Test class in com. exam.oca package?
+
+A.	package com.exam.oca.Test;
+B.	package com.exam.oca;
+C.	package com.exam.oca.*;
+D.	Package com.exam.oca;
+
+====================================================================================================================================================
+
+9.	Which of the following will give you current system time?
+
+Select 2 options.
+
+A.	System.out.println(LocalDate.now());
+B.	System.out.println(new LocalDateTime());
+C.	System.out.println(LocalDateTime.now());
+D.	System.out.println(new LocalTime());
+E.	System.out.println(LocalDate.now());
+F.	System.out.println(LocalTime.now());
+G.	System.out.println(new LocalDate());
+
+C.	System.out.println(LocalDateTime.now());
+====================================================================================================================================================
+
+10. What will be the result of compiling and executing DivModTest class?
+
+   public class DivModTest {
+   public static void main(String[] args) {
+   System.out.println( 23 / 2.0 );
+   System.out.println( 23 % 2.0 );
+   }
+   }
+
+B. 11.5
+   1.0
+

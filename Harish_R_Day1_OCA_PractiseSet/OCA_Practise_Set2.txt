@@ -1,0 +1,175 @@
+OCA PREP QUESTIONS
+SET – 2
+ For the class Test, which option, if used to replace /*INSERT*/, will print "Lucky no.7" on to the console? 
+public class Test {
+public static void main(String[] args) {
+ /*INSERT*/
+ switch(var) {
+ case '7':
+ System.out.println("Lucky no. 7");
+ break;
+ default:
+ System.out.println("DEFAULT");
+ }
+ }
+ }
+
+D. int var=’7’
+========================================================================================================================
+2. Given Code::
+ import java.io.*;
+
+ class ReadTheFile {
+ static void print() { //Line 4
+ throw new IOException(); //Line 5
+ }
+ }
+
+ public class Test {
+ public static void main(String[] args) { //Line 10
+ ReadTheFile.print(); //Line 11
+ //Line 12
+ }
+ }
+Which 2 changes are necessary so that code compiles successfully?
+A. Surround Line 11 with below try-catch block:
+try {
+ ReadTheFile.print();
+} catch(IOException | Exception e ) {
+ e.printStackTrace();
+}
+B. Surround Line 11 with below try-catch block:
+try {
+ ReadTheFile.print();
+} catch(IOException | e ) {
+ e.printStackTrace();
+}
+
+D. Replace Line 4 with static void print() throws Exception {
+========================================================================================================================
+3. Given Code:
+ public class Test {
+ private static int [] arr;
+ public static void main(String [] args) {
+ if(arr.length > 0 && arr != null) {
+ System.out.println(arr[0]);
+ }
+ }
+ }
+Predict Output, if the above code is run with given command?
+java Test
+
+B. NullPointerException is thrown at runtime(Bcoz trying to var with null value)
+========================================================================================================================
+4. Consider below code:
+import java.time.Period;
+public class Test {
+ public static void main(String [] args) {
+ Period period = Period.of(0, 1000, 0);
+ System.out.println(period);
+ }
+}
+What will be the result of compiling and executing Test class?
+
+D. P1000M
+========================================================================================================================
+
+5. What will be the result of compiling and executing Test class?
+ public class Test {
+ static String msg; //Line 2
+ public static void main(String[] args) {
+ String msg; //Line 4
+ if(args.length > 0) {
+ msg = args[0]; //Line 6
+ }
+ System.out.println(msg); //Line 8
+ }
+ }
+
+B. Line 8 causes compilation failure(Bcoz value not initialized for msg)
+========================================================================================================================
+
+6. What will be the result of compiling and executing Test class?
+ public class Test {
+
+ private static void add(double d1, double d2) {
+ System.out.println("double version: " + (d1 + d2));
+ }
+
+ private static void add(Double d1, Double d2) {
+ System.out.println("Double version: " + (d1 + d2));
+ }
+
+ public static void main(String[] args) {
+ add(10.0, new Double(10.0));
+ }
+
+ }
+A. An exception is thrown at runtime(Bcoz no corresponding method found)
+========================================================================================================================
+
+7. What will be the output of compiling and executing the Test class?
+ public class Test {
+ public static void main(String[] args) {
+ int a = 5;
+ int x = 10;
+ switch(x) {
+ case 10:
+ a *= 2;
+ case 20:
+ a *= 3;
+ case 30:
+ a *= 4;
+ }
+ System.out.println(a);
+ }
+ }
+
+B. 120
+========================================================================================================================
+
+8. What will be the result of compiling and executing Test class?
+ public class Test {
+ public static void main(String[] args) {
+ int i;
+ for(i=0; i<=2; i++){}
+ System.out.println(i);
+ }
+ }
+A. 3
+
+========================================================================================================================
+
+9. What will be the result of compiling and executing Test class?
+ public class Test {
+ public static void main(String[] args) {
+ StringBuilder sb = new StringBuilder("Good"); //Line 3
+ change(sb); //Line 4
+ System.out.println(sb); //Line 5
+ }
+ private static void change(StringBuilder s) {
+ s.append("_Morning"); //Line 9
+ }
+ }
+
+C. Good_Morning(Bcoz Stringbuilder is mutable )
+========================================================================================================================
+
+10. Below is the code of Test.java file:
+ import java.util.ArrayList;
+ import java.util.List;
+
+ abstract class Animal {}
+ class Dog extends Animal{}
+
+ public class Test {
+ public static void main(String [] args) {
+ List<Animal> list = new ArrayList<Dog>();
+ list.add(0, new Dog());
+ System.out.println(list.size() > 0);
+ }
+ }
+
+What will be the result of compiling and executing Test class?
+
+D. compilation error(Bcoz incompatible types <Animal>and<Dog>)
