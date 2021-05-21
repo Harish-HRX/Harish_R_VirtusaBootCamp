@@ -1,0 +1,147 @@
+1.Consider below code:
+ //Test.java
+ import java.time.LocalDate;
+ import java.time.format.DateTimeFormatter;
+
+ public class Test {
+ public static void main(String [] args) {
+ LocalDate date1 = LocalDate.parse("1947-08-15", DateTimeFormatter.ISO_DATE);
+ LocalDate date2 = LocalDate.parse("1947-08-15",
+ DateTimeFormatter.ISO_LOCAL_DATE);
+ LocalDate date3 = LocalDate.of(1947, 8, 15);
+
+ System.out.println(date1.equals(date2) + " : " + date2.equals(date3));
+ }
+ }
+What will be the result of compiling and executing Test class?
+ A: true:true
+==========================================================================================================================================
+2. How many String objects are there in the HEAP memory, when control is at Line 9?
+ public class Test {
+ public static void main(String[] args) {
+ String s1 = new String("Java"); //Line 3
+ String s2 = "JaVa"; //Line 4
+ String s3 = "JaVa"; //Line 5
+ String s4 = "Java"; //Line 6
+ String s5 = "Java"; //Line 7
+
+ int i = 1; //Line 9
+
+ }
+}
+A. 3
+B. 4
+C. 2
+D. 5
+==========================================================================================================================================
+3. Consider below code:
+ //Test.java
+ import java.util.ArrayList;
+ import java.util.List;
+
+ public class Test {
+ public static void main(String[] args) {
+ List<String> list = new ArrayList<>(4);
+ list.add(0, "Array");
+ list.add(2, "List");
+
+ System.out.println(list);
+ }
+ }
+What will be the result of compiling and executing Test class?
+
+A: Exception thrown at run time(Bcoz size four give and trying add another 2 vars)
+
+==========================================================================================================================================
+4. Wrapper classes are defined in which of the following package?
+
+A. java.util
+==========================================================================================================================================
+5. Consider below code:
+ //Test.java
+ import java.time.LocalDate;
+
+ public class Test {
+ public static void main(String [] args) {
+ LocalDate obj = LocalDate.now();
+ System.out.println(obj.getHour());
+ }
+ }
+Which of the following statement is correct?
+A. Code fails to compile(error: cannot find symbol System.out.println(obj.getHour());)
+
+==========================================================================================================================================
+6. What will be the result of compiling and executing Test class?
+ public class Test {
+ public static void main(String [] args) {
+ int a = 3;
+ System.out.println(a++ == 3 || --a == 3 && --a == 3);
+ }
+ }
+
+B. true(Short circuit operator concept)
+==========================================================================================================================================
+
+7. Consider below code:
+ //Test.java
+ import java.util.ArrayList;
+ import java.util.List;
+
+ public class Test {
+ public static void main(String[] args) {
+ List<String> dryFruits = new ArrayList<>();
+ dryFruits.add("Walnut");
+ dryFruits.add("Apricot");
+ dryFruits.add("Almond");
+ dryFruits.add("Date");
+
+ for(String dryFruit : dryFruits) {
+ if(dryFruit.startsWith("A")) {
+ dryFruits.remove(dryFruit);
+ }
+ }
+
+ System.out.println(dryFruits);
+ }
+ }
+
+What will be the result of compiling and executing Test class
+
+B. An exception is thrown at runtime(Exception in thread "main" java.util.ConcurrentModificationException)
+==========================================================================================================================================
+8. DateTimeFormatter is defined inside which package?
+
+C. java.text
+==========================================================================================================================================
+
+9. What will be the result of compiling and executing Test class?
+ public class Test {
+ public static void main(String[] args) {
+ String [] arr = {"abc", "TrUe", "false", null, "FALSE"};
+ for(String s : arr) {
+ System.out.print(Boolean.valueOf(s) ? "T" : "F");
+ }
+ }
+}
+
+C. FTFFF
+==========================================================================================================================================
+
+10. Consider below code:
+ import java.util.ArrayList;
+ import java.util.List;
+
+ public class Test {
+ public static void main(String[] args) {
+ List<String> days = new ArrayList<>();
+ days.add("SUNDAY");
+ days.add("SUNDAY");
+ days.add("MONDAY");
+ System.out.println(days.size());
+ days.clear();
+ System.out.println(days.size());
+ }
+}
+What will be the result of compiling and executing Test class?
+
+B. 3
