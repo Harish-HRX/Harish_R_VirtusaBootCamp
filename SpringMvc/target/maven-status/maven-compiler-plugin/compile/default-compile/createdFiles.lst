@@ -1,0 +1,10 @@
+model\Jobseeker.class
+dao\EmployerDao.class
+dao\JobseekerDao.class
+controller\EmployerController.class
+model\Job.class
+service\UserService.class
+controller\JobseekerController.class
+model\Employer.class
+service\User.class
+utility\ConnectionManager.class
